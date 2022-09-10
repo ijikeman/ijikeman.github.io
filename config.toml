@@ -1,5 +1,5 @@
 baseURL = 'http://ijikeman.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "ijikeman Tech Blog"
 theme = 'puppet'
 publishDir = 'docs'
