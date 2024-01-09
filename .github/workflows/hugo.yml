@@ -47,9 +47,9 @@ jobs:
 
       - name: Update theme file
         run: |
-          LIST=`cat update_theme_file.list`
+          LIST=`cat update_theme_files/file.list`
           for theme_file in "${LIST[@]}"; do
-            echo "$theme_file"
+            cp -fp update_theme_files/$theme_file themes/$theme_file
           done
 
       - name: Setup Pages
