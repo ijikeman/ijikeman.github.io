@@ -59,12 +59,6 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: Update theme file
-        run: |
-          LIST=`cat update_theme_files/file.list`
-          for theme_file in "${LIST[@]}"; do
-            cp -fp "update_theme_files/${theme_file}" "themes/${theme_file}"
-          done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
