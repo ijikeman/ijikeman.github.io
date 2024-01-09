@@ -2,13 +2,15 @@ baseURL = 'https://blog.1mg.org/'
 languageCode = 'en-us'
 title = "ijikeman's Site"
 theme = 'PaperMod'
+
+### Function Comment using Disqus
 [services]
   [services.disqus]
     shortname = 'ijikemans-site'
 
 ## PaperMod Settings
 googleAnalytics = 'UA-29812841-4'
-paginate = 2
+enableRobotsTXT = true
 
 [[menu.main]]
 identifier = "search"
@@ -27,6 +29,11 @@ identifier = "tags"
 name = "tags"
 url = "/tags/"
 weight = 20
-  
-[outputs]  ## 後述の検索ページにはこれが必要。
+
+## 後述の検索ページにはこれが必要
+[outputs]
 home = ["HTML", "JSON"]
+
+## params
+[params]
+env = 'production' # SEO
