@@ -1,0 +1,9 @@
+services:
+  hugo:
+    container_name: hugo
+    image: klakegg/hugo:latest
+    entrypoint: tail -f /dev/null
+    volumes:
+      - .:/src
+    ports:
+      - "1313:1313"
