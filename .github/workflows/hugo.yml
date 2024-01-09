@@ -44,6 +44,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
       - name: Update theme file
         run: |
@@ -52,11 +57,6 @@ jobs:
             cp -fp "update_theme_files/${theme_file}" "themes/${theme_file}"
           done
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
