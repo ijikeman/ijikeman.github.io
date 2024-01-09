@@ -1,9 +1,11 @@
-services:
-  hugo:
-    container_name: hugo
-    image: klakegg/hugo:latest
-    entrypoint: tail -f /dev/null
-    volumes:
-      - .:/src
-    ports:
-      - "1313:1313"
+version: '3'
+services: 
+    hugo:
+        image: klakegg/hugo
+        volumes:
+            - ".:/hugo"
+        entrypoint: tail -f /dev/null
+        ports:
+            - "1313:1313"
+        tty: true
+        working_dir: /hugo
