@@ -1,5 +1,5 @@
 ---
-title: "KillerCodaにオリジナルProfileを追加する"
+title: "KillerCodaにオリジナルScenarioを追加する[初期設定編]"
 date: 2024-01-09T00:00:00+00:00
 # weight: 1
 # aliases: ["/first"]
@@ -10,9 +10,10 @@ TocOpen: false
 draft: false
 ---
 # 概要
-
+```
 KillerCodaはあらかじめ登録されたProfile以外に自分のGithubリポジトリを同期し、オリジナルのプロファイルを読み込ませることができます。
 その手順を紹介します。
+```
 
 # 流れ
 1. Githubにリポジトリを作成(文中では省略)
@@ -50,4 +51,4 @@ KillerCodaはあらかじめ登録されたProfile以外に自分のGithubリポ
 * Update Statusの時刻が最新化されていれば成功です。
   ![](killercoda_setup6_01.gif )
 
-[次の記事](https:/blog.1mg.org/killercoda/create_scenario.md)ではオリジナルシナリオを作ります。
+[次の記事](https:/blog.1mg.org/posts/killercoda/create_scenario/)ではオリジナルシナリオを作ります。
