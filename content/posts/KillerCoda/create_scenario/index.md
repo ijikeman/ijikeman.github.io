@@ -53,6 +53,11 @@ KillerCodaはあらかじめ登録されたProfile以外に自分のGithubリポ
   ```
 
 ### 1-4. Githubリポジトリへアップロードし反映
+* サンプルプログラムの一部クローン方法を記載しておきます
+```
+git clone --filter=blob:none --sparse https://github.com/killercoda/scenario-examples.git
+git sparse-checkout set kubernetes-2node-multi-step-verification
+```
 
 * 上記構成をGithubへpushすると、GithubのpushイベントによりKillerCodaへwebhookが実行され、KillerCoda側からGithubのリポジトリの情報が取得されます。
 ![](create_scenario1_01.gif )
@@ -116,10 +121,8 @@ KillerCodaはあらかじめ登録されたProfile以外に自分のGithubリポ
 
 ### 2-3. 実行(intro)
 * 上記サンプルをGithubにPushし、実際の動きを確認します
-![](create_scenario2_01.gif )
 
 * introにはintro.mdを読み込む指定が行われております。
-![](create_scenario2_02.gif )
   ```
     "details": {
       "intro": {
@@ -128,12 +131,11 @@ KillerCodaはあらかじめ登録されたProfile以外に自分のGithubリポ
   ```
 
 * introでは自動的に[Start]が表示され、Stepに移動します
-
+![](create_scenario2_03.gif )
 
 ### 2-4. 実行(Step1)
 * Step1ではkubernetesのmy-podというpodを作成する必要があり、verifyが指定されていますので[CHECK]が表示されます。
 * また、[CHECK]を押すとverify:で指定したプログラム(ここではverify.sh)が実行され、結果が0であればOKとなります。
-![](create_scenario2_03.gif )
 
 * 実際にmy-podを作成する為、以下のコマンドを実行します
 ```
