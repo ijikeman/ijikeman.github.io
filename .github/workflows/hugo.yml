@@ -49,14 +49,6 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-
-      - name: Update theme file
-        run: |
-          LIST=`cat update_theme_files/file.list`
-          for theme_file in "${LIST[@]}"; do
-            cp -fp "update_theme_files/${theme_file}" "themes/${theme_file}"
-          done
-
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -67,6 +59,12 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      - name: Update theme file
+        run: |
+          LIST=`cat update_theme_files/file.list`
+          for theme_file in "${LIST[@]}"; do
+            cp -fp "update_theme_files/${theme_file}" "themes/${theme_file}"
+          done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
