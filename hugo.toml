@@ -2,7 +2,31 @@ baseURL = 'https://blog.1mg.org/'
 languageCode = 'en-us'
 title = "ijikeman's Site"
 theme = 'PaperMod'
-
 [services]
   [services.disqus]
     shortname = 'ijikemans-site'
+
+## PaperMod Settings
+googleAnalytics = 'UA-29812841-4'
+paginate = 2
+
+[[menu.main]]
+identifier = "search"
+name = "search"
+url = "/search/"
+weight = 12
+
+[[menu.main]]
+identifier = "categories"
+name = "categories"
+url = "/categories/"
+weight = 15
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+  
+[outputs]  ## 後述の検索ページにはこれが必要。
+home = ["HTML", "JSON"]
