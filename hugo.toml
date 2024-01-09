@@ -2,3 +2,7 @@ baseURL = 'https://blog.1mg.org/'
 languageCode = 'en-us'
 title = "ijikeman's Site"
 theme = 'PaperMod'
+
+[services]
+  [services.disqus]
+    shortname = 'ijikemans-site'

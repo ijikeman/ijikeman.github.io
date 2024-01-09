@@ -44,6 +44,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Update theme file
+        run: |
+          LIST=`cat update_theme_file.list`
+          for theme_file in "${LIST[@]}"; do
+            echo "$theme_file"
+          done
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
