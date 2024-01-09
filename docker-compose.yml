@@ -1,6 +1,7 @@
 version: '3'
 services: 
     hugo:
+        container_name: hugo
         image: klakegg/hugo
         volumes:
             - ".:/hugo"
