@@ -2,4 +2,3 @@ baseURL = 'https://blog.1mg.org/'
 languageCode = 'en-us'
 title = "ijikeman's Site"
 theme = 'PaperMod'
-googleAnalytics = 'UA-29812841-4'
