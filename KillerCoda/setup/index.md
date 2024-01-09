@@ -51,4 +51,4 @@ KillerCodaはあらかじめ登録されたProfile以外に自分のGithubリポ
 * Update Statusの時刻が最新化されていれば成功です。
   ![](killercoda_setup6_01.gif )
 
-[次の記事](./killercoda/create_scenario/)ではオリジナルシナリオを作ります。
+[次の記事](/killercoda/create_scenario/)ではオリジナルシナリオを作ります。
