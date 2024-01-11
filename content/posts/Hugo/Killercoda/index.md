@@ -1,15 +1,15 @@
 ---
 title: "Hugo用開発環境(Killercoda)"
-date: 2024-01-11T09:00:00+00:00
+date: 2024-01-11T23:00:00+00:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["Hugo", "Killercoda"]
 categories: [ "Hugo" ]
 author: "Me"
 TocOpen: false
-draft: true
-# cover:
-#     image: "test.jpg" # image path/url
+draft: false
+cover:
+    image: "/static/images/eyecatch/hugo_killercoda.png" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover
 #     relative: false # when using page bundles set this to true
@@ -70,6 +70,7 @@ Killercodaという学習用プラットフォームサービスでHugo用デバ
     git submodule -i
     touch /tmp/background-finished
     ```
+![](intro.gif)
 
 ### 2-3. step1
 * 外部インターネットからkillercodaの環境内へアクセスするには、グローバル用IP+Portの組み合わせのhostnameが割り当てられアクセスすることができます。
@@ -86,6 +87,13 @@ sed -e 's/^/hugo server --buildDrafts --port 443 --bind 0.0.0.0 --baseURL=/' -e 
 
 sh startHugo.sh
 ```
+
+![](step1.gif)
+
+* ACCESS HUGOへアクセスするとhugoリポジトリのコンテンツが表示されます。
+
+![](hugo_demo.gif)
+
 
 上記で紹介したサンプルシナリオは以下になります。
 * https://github.com/ijikeman/hugo_scenario_on_killercoda.git
