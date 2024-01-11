@@ -9,7 +9,7 @@ author: "Me"
 TocOpen: false
 draft: false
 cover:
-    image: "/static/images/eyecatch/hugo_killercoda.png" # image path/url
+    image: "/images/eyecatch/hugo_killercoda.png" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover
 #     relative: false # when using page bundles set this to true
