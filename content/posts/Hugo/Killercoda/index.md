@@ -18,6 +18,7 @@ draft: true
 # 概要
 
 Hugo開発を自身の端末に作らずに、どこからでも気軽にHugoのテンプレート変更や記事の確認などを行いたい。
+
 Killercodaという学習用プラットフォームサービスでHugo用デバッグ環境を用意する方法を記載します。
 
 # Killercoda過去記事
@@ -71,8 +72,8 @@ Killercodaという学習用プラットフォームサービスでHugo用デバ
     ```
 
 ### 2-3. step1
-* killercodaの環境内への外部インターネットからアクセスするには、グローバル用IP+Portの組み合わせのhostnameが割り当てられアクセスすることができます。
-* またこのhostnameは`/etc/killercoda/host`ファイルに以下の内容で記載されています。
+* 外部インターネットからkillercodaの環境内へアクセスするには、グローバル用IP+Portの組み合わせのhostnameが割り当てられアクセスすることができます。
+* またこのhostnameは`/etc/killercoda/host`ファイルに以下のフォーマットで記載されています。
 
 ```
 -を含むランダム英数字-IP-IP-IP-IP-PORT.*.*.killercoda.com
@@ -81,7 +82,10 @@ Killercodaという学習用プラットフォームサービスでHugo用デバ
 * よってstep1では上記hostファイルを加工し、hugoサーバの起動時に--baseURL=オプションとして起動できるようにしています。
 
 ```
-sed -e 's/^/hugo server --port 443 --bind 0.0.0.0 --baseURL=/' -e 's/443/PORT/' /etc/killercoda/host > startHugo.sh
+sed -e 's/^/hugo server --buildDrafts --port 443 --bind 0.0.0.0 --baseURL=/' -e 's/443/PORT/' /etc/killercoda/host > startHugo.sh
 
 sh startHugo.sh
 ```
+
+上記で紹介したサンプルシナリオは以下になります。
+* https://github.com/ijikeman/hugo_scenario_on_killercoda.git
