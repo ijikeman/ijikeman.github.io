@@ -1,6 +1,6 @@
 ---
 title: "Hugo用開発環境(Killercoda)"
-date: 2024-01-11T23:00:00+00:00
+date: 2024-01-11T23:00:00+09:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["Hugo", "Killercoda"]
