@@ -7,6 +7,9 @@ theme = 'PaperMod'
 [services]
   [services.disqus]
     shortname = 'ijikemans-site'
+### Functions Google Analytics 4
+  [services.googleAnalytics]
+    ID = 'G-411537872'
 
 ## PaperMod Settings
 googleAnalytics = 'UA-29812841-4'
@@ -37,4 +40,3 @@ home = ["HTML", "JSON"]
 ## params
 [params]
 env = 'production' # SEO
-googleAnalyticsID = '<G-411537872>'
