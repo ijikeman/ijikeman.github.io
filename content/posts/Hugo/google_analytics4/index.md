@@ -1,6 +1,6 @@
 ---
 title: "HugoのGoogle Analytics 4対応(公式ページを参照)"
-date: 2024-01-12T10:00:00+09:00
+date: 2024-01-12T21:00:00+09:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["Hugo", "Google Analytics"]
