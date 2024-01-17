@@ -86,7 +86,7 @@ upstreams = [
 ]
 
 email_domains = [
-    "yourdomain.com" # 一旦デフォルトのまま
+    "yourcompany.com" # 一旦デフォルトのまま
 ]
 
 client_id = "123456.apps.googleusercontent.com" # 一旦デフォルトのまま
@@ -106,4 +106,4 @@ systemctl start oauth2_proxy.service
 
 ![](oauth2_proxy_setup_confirm02.gif)
 
-こちらの[記事](/content/posts/oauth2-proxy/setup_google_auth/)にてGoogle認証に必要な設定を行っていきます
+こちらの[記事](/posts/oauth2-proxy/setup_google_auth/)にてGoogle認証に必要な設定を行っていきます
