@@ -9,8 +9,8 @@ author: "Me"
 showToc: true
 TocOpen: false
 draft: false
-# cover:
-    # image: "/images/eyecatch/KillerCoda/create_scenario/index.png" # image path/url
+cover:
+  image: "/images/eyecatch/KillerCoda/create_scenario/index.png"
 ---
 # 概要
 
