@@ -1,0 +1,24 @@
+title:
+  fontSize: 36
+  fontStyle: Bold
+  start:
+    pX: 50
+    pY: 100
+info:
+  start:
+    pX: 450
+    pY: 50
+  fontSize: 12
+  fontStyle: Regular
+tags:
+  start:
+    pX: 550
+    pY: 220
+  fontStyle: Regular
+  fontSize: 0
+category:
+  start:
+    px: 400
+    py: 50
+  fontSize: 12
+  fontStyle: Regular

@@ -1,5 +1,5 @@
 ---
-title: "Hugo用開発環境(devcontainer on vs Code)"
+title: "Hugo開発環境(devcontainer)"
 date: 2023-10-12T22:00:00+00:00
 # weight: 1
 # aliases: ["/first"]
@@ -8,7 +8,8 @@ categories: [ "Hugo" ]
 author: "Me"
 TocOpen: false
 draft: false
-# cover:
+cover:
+    image: "/images/eyecatch/Hugo/devcontainer/index.png" # image path/url
 #     image: "test.jpg" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover

@@ -4,10 +4,13 @@ date: 2024-01-09T00:00:00+09:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["killercoda"]
+categories: ['killercoda']
 author: "Me"
 showToc: true
 TocOpen: false
 draft: false
+# cover:
+    # image: "/images/eyecatch/KillerCoda/create_scenario/index.png" # image path/url
 ---
 # 概要
 

@@ -4,12 +4,13 @@ date: 2024-01-15T20:00:00+09:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["oauth2-proxy", "2fa"]
+categories: ["oauth2-proxy"]
 author: "Me"
 showToc: true
 TocOpen: false
 draft: false
 cover:
-    image: "/images/eyecatch/oauth2-proxy_setup.png" # image path/url
+    image: "/images/eyecatch/oauth2-proxy/setup_first/index.png" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover
 #     relative: false # when using page bundles set this to true

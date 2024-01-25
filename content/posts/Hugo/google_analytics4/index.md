@@ -1,5 +1,5 @@
 ---
-title: "HugoのGoogle Analytics 4対応(公式ページを参照)"
+title: "Hugo GoogleAnalytics4 対応"
 date: 2024-01-12T21:00:00+09:00
 # weight: 1
 # aliases: ["/first"]
@@ -9,7 +9,7 @@ author: "Me"
 TocOpen: false
 draft: false
 cover:
-    image: "/images/eyecatch/hugo_analytics4.png" # image path/url
+    image: "/images/eyecatch/Hugo/google_analytics4/index.png" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover
 #     relative: false # when using page bundles set this to true
