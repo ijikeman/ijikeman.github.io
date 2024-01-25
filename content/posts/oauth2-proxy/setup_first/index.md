@@ -2,7 +2,7 @@
 title: "oauth2-proxyの導入(Setup編)"
 date: 2024-01-15T20:00:00+09:00
 # weight: 1
-# aliases: ["/first"]
+aliases: ["/oauth2-proxy/setup"]
 tags: ["oauth2-proxy", "2fa"]
 categories: ["oauth2-proxy"]
 author: "Me"

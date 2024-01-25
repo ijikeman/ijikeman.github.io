@@ -2,7 +2,7 @@
 title: "Hugo GoogleAnalytics4 対応"
 date: 2024-01-12T21:00:00+09:00
 # weight: 1
-# aliases: ["/first"]
+aliases: ["/hugo/google_analytics4"]
 tags: ["Hugo", "Google Analytics"]
 categories: [ "Hugo" ]
 author: "Me"

@@ -2,7 +2,7 @@
 title: "KillerCodaにオリジナルScenarioを追加する[サンプルシナリオ作成編]"
 date: 2024-01-09T00:00:00+09:00
 # weight: 1
-# aliases: ["/first"]
+aliases: ["/killercoda/create_scenario"]
 tags: ["killercoda"]
 categories: ['killercoda']
 author: "Me"

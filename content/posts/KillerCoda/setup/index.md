@@ -2,7 +2,7 @@
 title: "KillerCodaにオリジナルScenarioを追加する[初期設定編]"
 date: 2024-01-09T00:00:00+09:00
 # weight: 1
-# aliases: ["/first"]
+aliases: ["/killercoda/setup"]
 tags: ["killercoda"]
 categories: ['KillerCoda']
 author: "Me"

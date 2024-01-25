@@ -2,7 +2,7 @@
 title: "Hugo開発環境(devcontainer)"
 date: 2023-10-12T22:00:00+00:00
 # weight: 1
-# aliases: ["/first"]
+aliases: ["/hugo/devcontainer"]
 tags: ["vscode", "devcontainer", "Hugo"]
 categories: [ "Hugo" ]
 author: "Me"
