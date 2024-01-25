@@ -2,18 +2,14 @@
 title: "Hugo用開発環境(Killercoda)"
 date: 2024-01-11T23:00:00+09:00
 # weight: 1
-# aliases: ["/first"]
+aliases: ["/hugo/killercoda"]
 tags: ["Hugo", "Killercoda"]
 categories: [ "Hugo" ]
 author: "Me"
 TocOpen: false
 draft: false
 cover:
-    image: "/images/eyecatch/hugo/Killercoda/index.png" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: false # only hide on current single page
+    image: "/images/eyecatch/Hugo/Killercoda/index.png"
 ---
 # 概要
 
