@@ -4,15 +4,14 @@ title = "ijikeman's Site"
 theme = 'PaperMod'
 
 ### Function Comment using Disqus
+### Functions Google Analytics 4
 [services]
   [services.disqus]
     shortname = 'ijikemans-site'
-### Functions Google Analytics 4
   [services.googleAnalytics]
     ID = 'G-411537872'
 
 ## PaperMod Settings
-googleAnalytics = 'UA-29812841-4'
 enableRobotsTXT = true
 
 [[menu.main]]

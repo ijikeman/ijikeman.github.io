@@ -63,7 +63,7 @@ HugoのGoogle Analytics 4への対応方法はいろいろな記事に記載さ�
 
 * 全てのページへ反映する為、extend_head.htmlを修正する_internal/google_analytics.htmlを読み込む設定を記載
 
-* layout/partials/extend_head.html
+* layouts/partials/extend_head.html
 ```
 {{ template "_internal/google_analytics.html" . }}
 ```
