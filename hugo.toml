@@ -1,6 +1,6 @@
 baseURL = 'https://blog.1mg.org/'
 languageCode = 'en-us'
-title = "ijikeman's Site"
+title = "ijikeman's blog"
 theme = 'PaperMod'
 
 ### Function Comment using Disqus
