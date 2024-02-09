@@ -2,7 +2,7 @@
 MD_PATH=$1
 FONTDIR='HackGen_v2.9.0'
 MOUNT_POINT="/go/mount/"
-TEMPLATE_IMAGE='eyecatch_template2.png'
+TEMPLATE_IMAGE='eyecatch_template.png'
 MOUNT_SRC='/home/vscode/project/ijikeman.github.io/'
 
 mkdir -p ./static/images/eyecatch/${MD_PATH}
