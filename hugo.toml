@@ -9,7 +9,7 @@ theme = 'PaperMod'
   [services.disqus]
     shortname = 'ijikemans-site'
   [services.googleAnalytics]
-    ID = 'G-411537872'
+    ID = 'G-HDB73CGY7H'
 
 ## PaperMod Settings
 enableRobotsTXT = true
