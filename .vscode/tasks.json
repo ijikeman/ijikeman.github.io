@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Hugo Server",
+            "type": "shell",
+            "command": "/usr/bin/docker run --rm --name hugo -v .:/hugo -p 1313:1313 -it hugo /usr/bin/hugo server -D --bind 0.0.0.0",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+    ]
+}

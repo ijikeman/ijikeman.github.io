@@ -1,12 +1,13 @@
 ---
+author: "ijikeman"
+showToc: true
+TocOpen: true
 title: "Hugo用開発環境(Killercoda)"
 date: 2024-01-11T23:00:00+09:00
 # weight: 1
 aliases: ["/hugo/killercoda"]
 tags: ["Hugo", "Killercoda"]
 categories: [ "Hugo" ]
-author: "Me"
-TocOpen: false
 draft: false
 cover:
     image: "/images/eyecatch/Hugo/Killercoda/index.png"

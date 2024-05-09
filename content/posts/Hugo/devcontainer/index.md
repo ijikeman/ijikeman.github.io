@@ -1,12 +1,13 @@
 ---
+author: "ijikeman"
+showToc: true
+TocOpen: true
 title: "Hugo開発環境(devcontainer)"
 date: 2023-10-12T22:00:00+00:00
 # weight: 1
 aliases: ["/hugo/devcontainer"]
 tags: ["vscode", "devcontainer", "Hugo"]
 categories: [ "Hugo" ]
-author: "Me"
-TocOpen: false
 draft: false
 cover:
     image: "/images/eyecatch/Hugo/devcontainer/index.png" # image path/url

@@ -2,7 +2,7 @@
 title: "高速同期parsyncfpを試す"
 date: 2023-10-14T00:00:00+00:00
 # weight: 1
-# aliases: ["/first"]
+aliases: ["/linux/parsyncfp"]
 tags: ["rsync", "parsyncfp"]
 author: "Me"
 showToc: true

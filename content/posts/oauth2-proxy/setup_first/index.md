@@ -1,13 +1,13 @@
 ---
+author: "ijikeman"
+showToc: true
+TocOpen: true
 title: "oauth2-proxyの導入(Setup編)"
 date: 2024-01-15T20:00:00+09:00
 # weight: 1
 aliases: ["/oauth2-proxy/setup"]
 tags: ["oauth2-proxy", "2fa"]
 categories: ["oauth2-proxy"]
-author: "Me"
-showToc: true
-TocOpen: false
 draft: false
 cover:
     image: "/images/eyecatch/oauth2-proxy/setup_first/index.png" # image path/url
