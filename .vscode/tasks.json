@@ -4,15 +4,25 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run Hugo Server",
+            "label": "Serve Drafts",
             "type": "shell",
-            "command": "/usr/bin/docker run --rm --name hugo -v .:/hugo -p 1313:1313 -it hugo /usr/bin/hugo server -D --bind 0.0.0.0",
+            "command": "hugo server -D",
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
             "isBackground": true,
-            "problemMatcher": []
+            "problemMatcher": [],
         },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "hugo",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
     ]
 }
