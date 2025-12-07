@@ -3,7 +3,7 @@ author: "ijikeman"
 showToc: true
 TocOpen: true
 title: "oauth2-proxyをbuildする(on Ubuntu22)"
-date: 2025-12-08T20:00:00+09:00
+date: 2025-12-07T00:00:00+09:00
 # weight: 1
 aliases: ["/oauth2-proxy/build"]
 tags: ["oauth2-proxy", "2fa"]
