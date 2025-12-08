@@ -18,22 +18,22 @@ cover:
 ---
 
 # このページでわかること
-* oauth2-proxyバイナリのbuildと起動
+* OAuth2-Proxyバイナリのbuildと起動
 
-# Oauth2-Proxy
+# OAuth2-Proxy
 * ライセンス: MITライセンス
-* [oauth2-proxy公式リポジトリ](https://github.com/oauth2-proxy/oauth2-proxy)
+* [OAuth2-Proxy公式リポジトリ](https://github.com/oauth2-proxy/oauth2-proxy)
 * [公式ドキュメント](https://oauth2-proxy.github.io/oauth2-proxy/)
 
 # 執筆時の環境とバージョン
 * Ubuntu: 22.04
-* oauth2-proxy: v7.13.0
+* OAuth2-Proxy: v7.13.0
 
 # 参考文献
 * [NRIのOpenStandiaが提供するOAuth2 Proxy最新情報](https://openstandia.jp/oss_info/oauth2-proxy/)
 
 * [複数サイト対応(同一ドメインかつ複数サブドメイン)](https://medium.com/devops-dudes/using-oauth2-proxy-with-nginx-subdomains-e453617713a) ... Cognitoだと認証後に返すURLがどちらかのドメインになってしまうので、だめなようだ .htpasswdによるBasic認証ならOKだった
-  * 複数サイト対応にはサイトごとにoauth2-proxyを用意する必要があるので、1ドメインで/以下のURL(/zabbix > zabbix.example.com)でリダイレクト&URL書き換えで対応するとかだとOK
+  * 複数サイト対応にはサイトごとにOAuth2-Proxyを用意する必要があるので、1ドメインで/以下のURL(/zabbix > zabbix.example.com)でリダイレクト&URL書き換えで対応するとかだとOK
 
 # 設定
 ## 設定方法
