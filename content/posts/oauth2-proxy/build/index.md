@@ -23,7 +23,7 @@ cover:
 # Oauth2-Proxy
 * ライセンス: MITライセンス
 * [oauth2-proxy公式リポジトリ](https://github.com/oauth2-proxy/oauth2-proxy)
-* [公式ドキュメント](https://oauth2-proxy.github.io/oauth2-proxy/docs/)
+* [公式ドキュメント](https://oauth2-proxy.github.io/oauth2-proxy/)
 
 # 執筆時の環境とバージョン
 * Ubuntu: 22.04
