@@ -23,7 +23,7 @@ cover:
 # Oauth2-Proxyの認証機構としてBasic認証でテスト実行してみる
 * .htpasswdを発行する
 ```
-docker run -it httpd:2.4.39-alpine htpasswd -nb -B user1 hogehoge  > ./.htpasswd 
+docker run -it httpd:2.4.39-alpine htpasswd -nb -B user1 hogehoge  > /etc/.htpasswd 
 ```
 
 # OAuth2-Proxyの設定ファイル
