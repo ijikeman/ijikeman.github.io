@@ -10,7 +10,7 @@ tags: ["oauth2-proxy", "2fa"]
 categories: ["oauth2-proxy"]
 draft: false
 cover:
-    image: "/images/eyecatch/oauth2-proxy/setup_first/index.webp" # image path/url
+    image: "/images/eyecatch/oauth2-proxy/build/index.webp" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover
 #     relative: false # when using page bundles set this to true
