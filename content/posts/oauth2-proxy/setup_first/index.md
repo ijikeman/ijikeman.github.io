@@ -56,7 +56,7 @@ URL: https://killercoda.com/ijikeman/scenario/oauth2-proxy
 * oauth2-proxyバイナリのダウンロード
 ```
 VERSION=7.13.0
-OS=darwin
+OS=linux
 ARCH=amd64
 FILENAME="oauth2-proxy-v${VERSION}.${OS}-${ARCH}"
 
@@ -110,9 +110,9 @@ useradd -g oauth2-proxy -s /sbin/nologin oauth2-proxy
 ## 1-4. oauth2-proxyの起動
 * テスト起動しConfigエラーがないか確認
 ```
-su - oauth2-proxy -s /bin/bash -c '/usr/local/bin/oauth2-proxy --config=/etc/oauth2-proxy/oauth2-proxy.cfg'
+su - oauth2-proxy -s /bin/bash -c '/usr/bin/oauth2-proxy --config /etc/oauth2-proxy/oauth2-proxy.cfg'
 ---
-/usr/local/bin/oauth2-proxy --config=/etc/oauth2-proxy/oauth2-proxy.cfg
+/usr/bin/oauth2-proxy --config=/etc/oauth2-proxy/oauth2-proxy.cfg
 2025/12/22 00:19:12 oauthproxy.go:130: mapping path "/" => upstream "http://127.0.0.1:8080"
 2025/12/22 00:19:12 oauthproxy.go:157: OAuthProxy configured for Google Client ID: 123456.apps.googleusercontent.com
 2025/12/22 00:19:12 oauthproxy.go:167: Cookie settings: name:_oauth2_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> refresh:disabled
