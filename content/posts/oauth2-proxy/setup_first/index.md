@@ -104,7 +104,7 @@ cookie_secret = "AAAAAAAAAAAAAAAA"
 * systemdサービスファイルに記載されている専用ユーザ/グループの作成
 ```
 groupadd oauth2-proxy
-useradd -g oauth2-proxy -s /sbin/nologin oauth2-proxy
+useradd -g oauth2-proxy -s /sbin/nologin -d /etc/oauth2-proxy oauth2-proxy
 ```
 
 ## 1-4. oauth2-proxyの起動
@@ -133,5 +133,3 @@ systemctl start oauth2-proxy.service
 
 次は以下の記事にて必要な認証設定を行っていきます
 * [Oauth2-Proxy動作テスト(Basic認証編)](/posts/oauth2-proxy/basic_auth/)
-
-
