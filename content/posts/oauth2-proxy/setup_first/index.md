@@ -3,7 +3,7 @@ author: "ijikeman"
 showToc: true
 TocOpen: true
 title: "oauth2-proxyの導入(Setup編)"
-date: 2024-01-15T20:00:00+09:00
+date: 2025-12-22T09:00:00+09:00
 # weight: 1
 aliases: ["/oauth2-proxy/setup"]
 tags: ["oauth2-proxy", "2fa"]
@@ -17,13 +17,12 @@ cover:
 #     hidden: false # only hide on current single page
 ---
 
-# このページでわかること
-
+# このページでわかること(※2025/12/22 更新しました)
 * oauth2-proxyの起動と画面の確認まで(基本設定)
 
 # 執筆時の環境とバージョン
 * Ubuntu: 22.04
-* oauth2-proxy: 2.2.0
+* oauth2-proxy: 7.13.0
 
 # 参考サイト
 
@@ -45,41 +44,44 @@ URL: https://killercoda.com/ijikeman/scenario/oauth2-proxy
 * 今回ファイル/ディレクトリ構成は以下になります
 ```
 - /
-  - usr/local/bin/
+  - usr/bin/
     - oauth2-proxy ... oauth2-proxyバイナリ
-  - etc/
-    - oauth2_proxy.cfg ... oauth2-proxy設定ファイル
+  - etc/oauth2-proxy/
+    - oauth2-proxy.cfg ... oauth2-proxy設定ファイル
   - usr/lib/systemd/system/
-    - oauth2_proxy.servce ... systemd管理サービスファイル
+    - oauth2-proxy.servce ... systemd管理サービスファイル
 ```
 
 ## 1-2. インストール
 * oauth2-proxyバイナリのダウンロード
 ```
-VERSION_OAUTH2=2.2.0
-VERSION_GO=1.8.1
-FILENAME_OAUTH2="oauth2_proxy-${VERSION_OAUTH2}.linux-amd64.go${VERSION_GO}"
+VERSION=7.13.0
+OS=darwin
+ARCH=amd64
+FILENAME="oauth2-proxy-v${VERSION}.${OS}-${ARCH}"
 
-wget https://github.com/bitly/oauth2_proxy/releases/download/v`echo ${VERSION_OAUTH2%.*}`/${FILENAME_OAUTH2}.tar.gz -O /tmp/oauth2-proxy.tar.gz
+wget https://github.com/oauth2-proxy/oauth2-proxy/releases/download/v${VERSION}/${FILENAME}.tar.gz -O /tmp/oauth2-proxy.tar.gz
 tar zxvf /tmp/oauth2-proxy.tar.gz -C /tmp
-mv /tmp/${FILENAME_OAUTH2}/oauth2_proxy /usr/local/bin/
-chmod +x /usr/local/bin/oauth2_proxy
+mv /tmp/${FILENAME}/oauth2-proxy /usr/bin/
+chmod +x /usr/bin/oauth2-proxy
 ```
 
 * 設定ファイルサンプルのダウンロード
 ```
-wget https://raw.githubusercontent.com/bitly/oauth2_proxy/v`echo ${VERSION_OAUTH2%.*}`/contrib/oauth2_proxy.cfg.example -O /etc/oauth2_proxy.cfg
+mkdir -p /etc/oauth2-proxy/
+wget https://raw.githubusercontent.com/oauth2-proxy/oauth2-proxy/refs/tags/v${VERSION}/contrib/oauth2-proxy.cfg.example -O /etc/oauth2-proxy/oauth2-proxy.cfg
 ```
 
 * systemd管理Serviceファイルのダウンロード
 ```
-wget https://raw.githubusercontent.com/bitly/oauth2_proxy/v`echo ${VERSION_OAUTH2%.*}`/contrib/oauth2_proxy.service.example -O /usr/lib/systemd/system/oauth2_proxy.service
+wget https://raw.githubusercontent.com/oauth2-proxy/oauth2-proxy/refs/tags/v${VERSION}/contrib/oauth2-proxy.service.example -O /usr/lib/systemd/system/oauth2-proxy.service
 ```
 
 ## 1-3. 設定ファイル修正(仮)
-* oauth2_proxy.cfgの以下の部分を修正します(最低限の設定と起動確認のみ)
-
+* oauth2-proxy.cfgの以下の部分を修正します(最低限の設定と起動確認のみ)
 ```
+vi /etc/oauth2-proxy/oauth2-proxy.cfg
+---
 http_address = "0.0.0.0:4180" # グローバルIPでListenできるように変更
 
 upstreams = [
@@ -92,12 +94,34 @@ email_domains = [
 
 client_id = "123456.apps.googleusercontent.com" # 一旦デフォルトのまま
 client_secret = "test" # 空欄だと起動時にエラーになる
-cookie_secret = "test"
+
+# ※必須パラメータ 仮なので16文字であればOK
+# 16, 24, or 32 bytes to create an AES cipher
+cookie_secret = "AAAAAAAAAAAAAAAA"
+```
+
+## 1-4. Oauth2-Proxyユーザ/グループの作成
+* systemdサービスファイルに記載されている専用ユーザ/グループの作成
+```
+groupadd oauth2-proxy
+useradd -g oauth2-proxy -s /sbin/nologin oauth2-proxy
 ```
 
 ## 1-4. oauth2-proxyの起動
+* テスト起動しConfigエラーがないか確認
 ```
-systemctl start oauth2_proxy.service
+su - oauth2-proxy -s /bin/bash -c '/usr/local/bin/oauth2-proxy --config=/etc/oauth2-proxy/oauth2-proxy.cfg'
+---
+/usr/local/bin/oauth2-proxy --config=/etc/oauth2-proxy/oauth2-proxy.cfg
+2025/12/22 00:19:12 oauthproxy.go:130: mapping path "/" => upstream "http://127.0.0.1:8080"
+2025/12/22 00:19:12 oauthproxy.go:157: OAuthProxy configured for Google Client ID: 123456.apps.googleusercontent.com
+2025/12/22 00:19:12 oauthproxy.go:167: Cookie settings: name:_oauth2_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> refresh:disabled
+2025/12/22 00:19:12 http.go:49: HTTP: listening on 0.0.0.0:4180
+```
+
+* systemd経由で起動
+```
+systemctl start oauth2-proxy.service
 ```
 
 ## 1-5. oauth2-proxyの画面確認
