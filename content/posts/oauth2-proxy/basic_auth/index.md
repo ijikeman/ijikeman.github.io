@@ -3,7 +3,7 @@ author: "ijikeman"
 showToc: true
 TocOpen: true
 title: "OAuth2-Proxy動作テスト(Basic認証編)"
-date: 2025-12-08T00:00:00+09:00
+date: 2025-12-22T00:00:00+09:00
 # weight: 1
 aliases: ["/oauth2-proxy/basic_auth"]
 tags: ["oauth2-proxy", "2fa"]
@@ -18,63 +18,58 @@ cover:
 ---
 
 # このページでわかること
-* Nginxのトップページに対してOAuth2-ProxyのBasic認証を経由してアクセスする
+* Nginxをバックエンドに設置してOAuth2-ProxyのBasic認証を経由してアクセスする(※2025/12/22更新)
 
 # Oauth2-Proxyの認証機構としてBasic認証でテスト実行してみる
 * .htpasswdを発行する
 ```
-docker run -it httpd:2.4.39-alpine htpasswd -nb -B user1 hogehoge  > /etc/.htpasswd 
+PASSWD=`printf "P@ssw0rd" | openssl dgst -binary -sha1 | openssl base64`
+echo "admin:{SHA}$PASSWD" > /etc/oauth2-proxy/.htpasswd
 ```
 
-# OAuth2-Proxyの設定ファイル
+# OAuth2-Proxyの設定ファイルの修正
 ```
-oauth2-proxy.cfg
+vi /etc/oauth2-proxy/oauth2-proxy.cfg
 ---
 # oauth2-proxyをhttp://*:4180でLISTENする
 http_address = "0.0.0.0:4180"
 
-# 認証後のcallbackの受け先を指定
-redirect_url = "http://test.example.com/oauth2/callback"
+# 認証後にOauth2-proxy経由での接続先
+upstreams = [
+  "http://127.0.0.1:8080"
+]
 
-# Basic Auth
-htpasswd_file = "/etc/.htpasswd" # Basic認証用パスワードのパスを指定
+email_domains = [
+    "yourcompany.com" # 一旦デフォルトのまま
+]
 
 # ※起動時に必須パラメータ。適当な文字列を設定
 client_id = "123456.apps.googleusercontent.com"
-
-# 認証後に、認証cookieの有効期間を指定
-cookie_expire = "0m15s"
 
 # ※必須パラメータ 仮なので16文字であればOK
 # 16, 24, or 32 bytes to create an AES cipher
 cookie_secret = "AAAAAAAAAAAAAAAA"
 
-# http通信の場合はこの値を無効化する必要がある(default: true)
-cookie_secure = "false"
-
-# 認証後にOauth2-proxy経由での接続先
-upstreams = [
-  "http://127.0.0.1:80"
-]
+# Basic Auth(※新しく追記)
+htpasswd_file = "/etc/oauth2-proxy/.htpasswd" # Basic認証用パスワードのパスを指定
 ```
 
-* nginxを80番で起動してOAuth2-Proxyの接続後の仮サイトとする
+# Backendの準備
+* nginxを8080番で起動してOAuth2-Proxyの接続後の仮サイトとする
 ```
-docker run --rm --name nginx -p 80:80 -itd nginx:latest
+docker run --rm --name nginx -p 8080:80 -itd nginx:latest
 ```
 
-* OAuth2-Proxyを起動する
+* OAuth2-Proxyを起動し、Basic認証ファイルが読み込まれていることを確認
 ```
-./oauth2-proxy --config ./oauth2-proxy.cfg
+systemctl restart oauth2-proxy
 ---
-[2025/12/08 09:39:05] [oauthproxy.go:128] using htpasswd file: /etc/.htpasswd
-[2025/12/08 09:39:05] [watcher.go:40] watching '/etc/.htpasswd' for updates
-[2025/12/08 09:39:05] [proxy.go:89] mapping path "/" => upstream "http://127.0.0.1:80"
-[2025/12/08 09:39:05] [oauthproxy.go:176] OAuthProxy configured for Google Client ID: 123456.apps.googleusercontent.com
-[2025/12/08 09:39:05] [oauthproxy.go:182] Cookie settings: name:_oauth2_proxy secure(https):false httponly:true expiry:15s domains:.test.example.com path:/ samesite: refresh:disabled
+[2025/12/08 09:39:05] [oauthproxy.go:128] using htpasswd file: /etc/oauth2-proxy/.htpasswd
+[2025/12/08 09:39:05] [watcher.go:40] watching '/etc/oauth2-proxy/.htpasswd' for updates
+[2025/12/08 09:39:05] [proxy.go:89] mapping path "/" => upstream "http://127.0.0.1:8080"
 ```
 
-* https://test.example.com:4180にブラウザからアクセスし、OAuth2-Proxyのページが表示されることを確認
+* https://IP:4180にブラウザからアクセスし、OAuth2-Proxyのページが表示されることを確認
 
 ![](oauth2-proxy01.gif)
 

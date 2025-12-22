@@ -3,7 +3,7 @@ author: "ijikeman"
 showToc: true
 TocOpen: true
 title: "oauth2-proxyの導入(Setup編)"
-date: 2025-12-22T09:00:00+09:00
+date: 2025-12-22T00:00:00+09:00
 # weight: 1
 aliases: ["/oauth2-proxy/setup"]
 tags: ["oauth2-proxy", "2fa"]
