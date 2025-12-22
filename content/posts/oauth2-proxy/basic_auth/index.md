@@ -19,6 +19,12 @@ cover:
 # このページでわかること
 * Nginxのトップページに対してOAuth2-ProxyのBasic認証を経由してアクセスする
 
+# Killercoda URL
+この記事の内容はKillercodaにて学習コンテンツとして公開しております。
+併せて、動作確認で利用してください。
+
+URL: https://killercoda.com/ijikeman/scenario/oauth2-proxy
+
 ## Oauth2-Proxyの認証機構としてBasic認証でテスト実行してみる
 * .htpasswdを発行する
 ```
