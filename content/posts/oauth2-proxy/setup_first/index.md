@@ -3,7 +3,7 @@ author: "ijikeman"
 showToc: true
 TocOpen: true
 title: "oauth2-proxyの導入(Setup編)"
-date: 2025-12-22T00:00:00+09:00
+date: 2025-12-22T00:00:00+08:50
 # weight: 1
 aliases: ["/oauth2-proxy/setup"]
 tags: ["oauth2-proxy", "2fa"]
@@ -131,4 +131,7 @@ systemctl start oauth2-proxy.service
 
 ![](oauth2_proxy_setup_confirm02.gif)
 
-こちらの[記事](/posts/oauth2-proxy/setup_google_auth/)にてGoogle認証に必要な設定を行っていきます
+次は以下の記事にて必要な認証設定を行っていきます
+* [Oauth2-Proxy動作テスト(Basic認証編)](/posts/oauth2-proxy/basic_auth/)
+
+
