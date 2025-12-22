@@ -18,7 +18,7 @@ cover:
 ---
 
 # このページでわかること
-* OAuth2-Proxyバイナリのbuildと起動
+* OAuth2-Proxyバイナリのbuild、Dockerイメージで起動
 
 # OAuth2-Proxy
 * ライセンス: MITライセンス
@@ -66,9 +66,10 @@ make build
 
 ## コンパイル済みbinaryを取得
 ```
-wget https://github.com/oauth2-proxy/oauth2-proxy/releases/download/v7.13.0/oauth2-proxy-v7.13.0.linux-amd64.tar.gz
-tar zxvf oauth2-proxy-v7.13.0.linux-amd64.tar.gz
-mv oauth2-proxy-v7.13.0.linux-amd64/oauth2-proxy /usr/local/bin/
+VERSION=7.13.0
+wget https://github.com/oauth2-proxy/oauth2-proxy/releases/download/v${VERSION}$/oauth2-proxy-v${VERSION}$.linux-amd64.tar.gz
+tar zxvf oauth2-proxy-v${VERSION}$.linux-amd64.tar.gz
+mv oauth2-proxy-v${VERSION}$.linux-amd64/oauth2-proxy /usr//bin/
 ```
 
 ## Dockerイメージから起動
