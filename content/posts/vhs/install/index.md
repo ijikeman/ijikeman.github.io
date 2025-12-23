@@ -54,7 +54,7 @@ could not launch browser: [launcher] Failed to get the debug url: ... No usable 
 [debパッケージから（Google Chrome）]
 ```Bash
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/google-chrome-stable.deb
-sudo apt install /tmp/google-chrome-stable.deb
+sudo apt install /tmp/google-chrome-stable.deb -y
 ```
 
 [Snapからインストール]
@@ -67,7 +67,7 @@ sudo snap install chromium --classic --channel latest/stable
 ```Bash
 VERSION=0.10.0
 
-wget https://github.com/charmbracelet/vhs/releases/download/v${VERSION}$/vhs_${VERSION}$_Linux_x86_64.tar.gz -O /tmp/vhs.tar.gz
+wget https://github.com/charmbracelet/vhs/releases/download/v${VERSION}/vhs_${VERSION}_Linux_x86_64.tar.gz -O /tmp/vhs.tar.gz
 tar zxvf /tmp/vhs.tar.gz -C /tmp/
 sudo mv /tmp/vhs_${VERSION}$_Linux_x86_64/vhs /usr/local/bin/
 ```
