@@ -101,11 +101,11 @@ Enter 1
 Sleep 5s
 Creating example.gif
 ```
-
-この画像は別のツール(terminalizer)で作ってます。
+実際の実行の様子(※この画像は別のツール- terminalizer -で作ってます。)
 ![](exec_vhs.gif)
 
-作成してできた画像はこちら
+
+作成してできたVHSのターミナル画像はこちらです。
 ![](example.gif)
 
 次は以下の記事にて設定ファイル(.tape)の記事を作成します
