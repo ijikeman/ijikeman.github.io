@@ -69,7 +69,7 @@ VERSION=0.10.0
 
 wget https://github.com/charmbracelet/vhs/releases/download/v${VERSION}/vhs_${VERSION}_Linux_x86_64.tar.gz -O /tmp/vhs.tar.gz
 tar zxvf /tmp/vhs.tar.gz -C /tmp/
-sudo mv /tmp/vhs_${VERSION}$_Linux_x86_64/vhs /usr/local/bin/
+sudo mv /tmp/vhs_${VERSION}_Linux_x86_64/vhs /usr/local/bin/
 ```
 
 ### 4. 動作確認
