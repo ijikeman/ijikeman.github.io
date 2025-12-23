@@ -10,7 +10,7 @@ tags: ["vhs", "terminal"]
 categories: ["Infrastructure", "Tools"]
 draft: false
 cover:
-    image: "/images/eyecatch//build/index.webp"
+    image: "/images/eyecatch/vhs/install/index.webp"
 ---
 
 # このページでわかること
