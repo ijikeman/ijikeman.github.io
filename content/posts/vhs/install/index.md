@@ -18,6 +18,10 @@ cover:
 * VHS実行時のChromium/Sandboxエラーの回避方法
 
 ---
+# 経緯
+今までターミナルのキャプチャーをWindowsのSnipping Toolを使ってたが、コマンド失敗時の取り直し等
+時間がかかるので、調査したところVHSなるものを見つけたので調査検証した結果を残しておく。
+
 ## 執筆時の環境とバージョン
 * Ubuntu: 22.04
 * VHS: v0.10.0
@@ -99,3 +103,6 @@ Creating example.gif
 ```
 
 ![](exec_vhs.gif)
+
+次は以下の記事にて設定ファイル(.tape)の記事を作成します
+* [VHS(設定ファイル編)](/posts/vhs/config/)
