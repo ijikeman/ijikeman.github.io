@@ -11,6 +11,10 @@ WEBP_IMAGE='webp:latest'
 # アイキャッチ画像フォルダの作成
 mkdir -p ./static/images/eyecatch/${MD_PATH}
 
+# Docker build
+docker build -t tcardgen:v0.9.0 ./Dockerfiles/tcardgen/
+docker build -t webp:latest ./Dockerfiles/webp/
+
 # tcardgenでアイキャッチ画像をpngで作成
 docker run --rm -v ${MOUNT_SRC}:${MOUNT_POINT} ${TCARDGEN_IMAGE} bash -c \
 "tcardgen --fontDir ${MOUNT_POINT}/static/fonts/${FONTDIR} \
