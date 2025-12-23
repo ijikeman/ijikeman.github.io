@@ -102,7 +102,11 @@ Sleep 5s
 Creating example.gif
 ```
 
+この画像は別のツール(terminalizer)で作ってます。
 ![](exec_vhs.gif)
+
+作成してできた画像はこちら
+![](example.gif)
 
 次は以下の記事にて設定ファイル(.tape)の記事を作成します
 * [VHS(設定ファイル編)](/posts/vhs/config/)
