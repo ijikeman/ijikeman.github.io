@@ -3,12 +3,12 @@ author: "ijikeman"
 showToc: true
 TocOpen: true
 title: "VHSの設定ファイルからターミナル動画Gifを作成する"
-date: 2025-12-25T5:00:00+09:00
+date: 2025-12-25T12:00:00+09:00
 # weight: 1
 aliases: ["/vhsy/config"]
 tags: ["vhs", "terminal"]
 categories: ["Infrastructure", "Tools"]
-draft: true
+draft: false
 cover:
     image: "/images/eyecatch/vhs/config/index.webp"
 ---
