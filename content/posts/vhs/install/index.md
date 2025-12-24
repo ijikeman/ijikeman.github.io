@@ -2,7 +2,7 @@
 author: "ijikeman"
 showToc: true
 TocOpen: true
-title: "VHSによるデモ動画GIFの作成"
+title: "VHSによるデモ動画GIFの作成環境の構築"
 date: 2025-12-23T5:00:00+09:00
 # weight: 1
 aliases: ["/vhsy/install"]
