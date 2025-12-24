@@ -35,7 +35,7 @@ cover:
 ターミナル操作を自動化し、GIFアニメーションとして記録できるVHSをインストールします。
 
 * 依存パッケージ(ttydとffmpeg)のインストール
-```Bash
+```bash
 sudo apt update
 sudo apt install -y ttyd ffmpeg
 ```
@@ -64,7 +64,7 @@ sudo snap install chromium --classic --channel latest/stable
 
 ### 3. コンパイル済みvhsバイナリを設置
 
-```Bash
+```bash
 VERSION=0.10.0
 
 wget https://github.com/charmbracelet/vhs/releases/download/v${VERSION}/vhs_${VERSION}_Linux_x86_64.tar.gz -O /tmp/vhs.tar.gz
@@ -73,7 +73,7 @@ sudo mv /tmp/vhs_${VERSION}_Linux_x86_64/vhs /usr/local/bin/
 ```
 
 ### 4. 動作確認
-```
+```bash
 vhs --help
 ```
 
@@ -110,3 +110,7 @@ Creating example.gif
 
 次は以下の記事にて設定ファイル(.tape)の記事を作成します
 * [VHS(設定ファイル編)](/posts/vhs/config/)
+
+# 関連記事
+* [VHSのインストール](/posts/vhs/install/)
+* [VHSの設定ファイル編集](/posts/vhs/config/)
