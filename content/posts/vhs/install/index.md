@@ -17,6 +17,10 @@ cover:
 * ターミナル操作を自動録画する「VHS」のUbuntuへの導入手順
 * VHS実行時のChromium/Sandboxエラーの回避方法
 
+# 関連記事
+* [VHSによるデモ動画GIFの作成環境の構築](/posts/vhs/install/)
+* [VHSの設定ファイルからターミナル動画Gifを作成する](/posts/vhs/config/)
+
 ---
 # 経緯
 今までターミナルのキャプチャーをWindowsのSnipping Toolを使ってたが、コマンド失敗時の取り直し等
@@ -108,9 +112,5 @@ Creating example.gif
 作成してできたVHSのターミナル画像はこちらです。
 ![](example.gif)
 
-次は以下の記事にて設定ファイル(.tape)の記事を作成します
-* [VHS(設定ファイル編)](/posts/vhs/config/)
-
-# 関連記事
-* [VHSのインストール](/posts/vhs/install/)
-* [VHSの設定ファイル編集](/posts/vhs/config/)
+次は以下の記事にて実際の設定ファイル(.tape)の編集等の記事を作成します
+* [VHSの設定ファイルからターミナル動画Gifを作成する](/posts/vhs/config/)
