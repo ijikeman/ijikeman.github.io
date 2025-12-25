@@ -54,7 +54,7 @@ vhs < sample.tape
 ## 2-1. 記録したい実行コマンドの記載
 以下の設定を記載することでその結果を録画することができます。
 
-| [Config Format] | [設定例] |  [意味] |
+| ***[Config Format]*** | ***[設定例]*** | ***[意味]*** |
 | --- | --- | --- |
 | Type "[COMMAND]" | Type "echo Test"| 実行したいコマンドを記載 |
 | Sleep [NUM] | Sleep 0.1s | 待機する時間を設定 単位を省略すると秒(単位:ms, s) |
@@ -68,7 +68,7 @@ vhs < sample.tape
 ## 2-2. 出力設定
 以下の設定を記載することで出力される画像の設定を調整することができます。
 
-| [Config Format] | [設定例] |  [意味] |
+| ***[Config Format]*** | ***[設定例]*** | ***[意味]*** |
 | --- | --- | --- |
 | Output FILENAME | Output example.gif | 出力先のファイル名を指定 |
 | Set Shell [VALUE] | Set Shell bash | 実行時のシェルを指定 |
