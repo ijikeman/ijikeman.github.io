@@ -4,7 +4,7 @@ MD_PATH=$1 # hugo blog path
 FONTDIR='HackGen_v2.9.0'
 MOUNT_POINT="/go/mount/" # tcardgen mount point
 TEMPLATE_IMAGE='eyecatch_template.png' # eyecatch template file
-MOUNT_SRC='/home/vscode/project/ijikeman.github.io/' # hugo blog path
+MOUNT_SRC='/home/ubuntu/claude/ijikeman.github.io/' # hugo blog path
 TCARDGEN_IMAGE='tcardgen:v0.9.0'
 WEBP_IMAGE='webp:latest'
 
