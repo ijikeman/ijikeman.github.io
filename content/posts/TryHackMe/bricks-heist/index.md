@@ -7,7 +7,7 @@ date: 2026-01-15T00:00:00+09:00
 aliases: ["/TryHackMe/bricks-heist"]
 tags: ["TryHackMe", "CTF", "walkthrough", "WordPress", "CVE-2024-25600", "Metasploit", "ThreatIntel", "マルウェア調査"]
 categories: ["TryHackMe"]
-draft: false
+draft: true
 cover:
     image: "/images/eyecatch/TryHackMe/bricks-heist/index.png"
 ---

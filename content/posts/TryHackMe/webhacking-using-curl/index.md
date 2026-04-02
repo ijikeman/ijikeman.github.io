@@ -7,7 +7,7 @@ date: 2026-01-13T00:00:00+09:00
 aliases: ["/TryHackMe/webhacking-using-curl"]
 tags: ["TryHackMe", "CTF", "walkthrough", "curl", "Web", "AoC2025"]
 categories: ["TryHackMe"]
-draft: false
+draft: true
 cover:
     image: "/images/eyecatch/TryHackMe/webhacking-using-curl/index.png"
 ---

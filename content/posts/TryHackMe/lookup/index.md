@@ -7,7 +7,7 @@ date: 2026-01-08T00:00:00+09:00
 aliases: ["/TryHackMe/lookup"]
 tags: ["TryHackMe", "CTF", "walkthrough", "elFinder", "ffuf", "SUID", "privilege escalation"]
 categories: ["TryHackMe"]
-draft: false
+draft: true
 cover:
     image: "/images/eyecatch/TryHackMe/lookup/index.webp"
 ---

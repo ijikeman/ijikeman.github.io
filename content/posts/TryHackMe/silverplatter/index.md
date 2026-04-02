@@ -7,7 +7,7 @@ date: 2026-03-21T00:00:00+09:00
 aliases: ["/TryHackMe/silverplatter"]
 tags: ["TryHackMe", "CTF", "walkthrough", "Silverpeas", "CVE-2024-36042", "認証バイパス"]
 categories: ["TryHackMe"]
-draft: false
+draft: true
 cover:
     image: "/images/eyecatch/TryHackMe/silverplatter/index.png"
 ---

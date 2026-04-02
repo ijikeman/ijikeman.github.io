@@ -7,7 +7,7 @@ date: 2026-03-20T00:00:00+09:00
 aliases: ["/TryHackMe/valenfind"]
 tags: ["TryHackMe", "CTF", "walkthrough", "LFI", "PathTraversal", "SSRF", "Flask"]
 categories: ["TryHackMe"]
-draft: false
+draft: true
 cover:
     image: "/images/eyecatch/TryHackMe/valenfind/index.png"
 ---
