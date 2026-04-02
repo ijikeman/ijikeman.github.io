@@ -7,7 +7,7 @@ date: 2026-03-27T00:00:00+09:00
 aliases: ["/TryHackMe/bsidesgtthompson"]
 tags: ["TryHackMe", "CTF", "walkthrough", "Tomcat", "Ghostcat", "CVE-2020-1938", "WAR", "CronJob"]
 categories: ["TryHackMe"]
-draft: false
+draft: true
 cover:
     image: "/images/eyecatch/TryHackMe/bsidesgtthompson/index.png"
 ---

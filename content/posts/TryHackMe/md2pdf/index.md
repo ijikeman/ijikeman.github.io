@@ -7,7 +7,7 @@ date: 2026-03-27T00:00:00+09:00
 aliases: ["/TryHackMe/md2pdf"]
 tags: ["TryHackMe", "CTF", "walkthrough", "SSRF", "iframe", "Flask"]
 categories: ["TryHackMe"]
-draft: false
+draft: true
 cover:
     image: "/images/eyecatch/TryHackMe/md2pdf/index.png"
 ---
